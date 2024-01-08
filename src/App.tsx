@@ -6,6 +6,7 @@ import {
 } from "lucide-react";
 import Tab from "./components/Tab";
 import { Icons } from "./utils/Icons";
+import InfoCard from "./components/InfoCard";
 
 function App() {
 	return (
@@ -93,7 +94,7 @@ function App() {
 						</div>
 					</div>
 				</header>
-				<div className='py-9 flex items-center'>
+				<div className='py-9 flex items-center mb-6'>
 					<h2 className='font-medium text-headingTwo mr-auto'>
 						Overview
 					</h2>
@@ -102,6 +103,15 @@ function App() {
 						<option value='Last-Year'>Last Year</option>
 						<option value='Last-Week'>Last Week</option>
 					</select>
+				</div>
+				<div className='flex gap-5 mb-8'>
+					<InfoCard title='Online orders' info='231' />
+					<InfoCard title='Amount received' info='₹23,92,312.19' />
+				</div>
+				<div>
+					<h2 className='text-headingTwo font-medium'>
+						Transactions | This Month
+					</h2>
 				</div>
 			</section>
 		</div>

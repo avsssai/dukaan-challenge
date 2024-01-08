@@ -21,6 +21,7 @@ export default {
 				normal: "14px",
 				subBody: "13px",
 				subTitle: "16px",
+				regular: "16px",
 				body: "15px",
 				caption: "12px",
 				headingTwo: "20px",
