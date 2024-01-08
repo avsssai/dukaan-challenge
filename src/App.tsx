@@ -1,4 +1,9 @@
-import { ChevronDown } from "lucide-react";
+import {
+	ChevronDown,
+	HelpCircle,
+	MessageSquareMore,
+	SearchIcon,
+} from "lucide-react";
 import Tab from "./components/Tab";
 import { Icons } from "./utils/Icons";
 
@@ -50,7 +55,55 @@ function App() {
 					</div>
 				</div>
 			</section>
-			<section></section>
+			<section className='px-8 w-full'>
+				<header className='flex justify-evenly items-center gap-4 py-3 h-16 border-b'>
+					<div className='flex items-center flex-1'>
+						<h5 className='text-blackFifty text-body mr-4'>
+							Payments
+						</h5>
+						<p className='flex gap-[6px] items-center'>
+							<HelpCircle
+								color='#4D4D4D'
+								width={12}
+								height={12}
+							/>{" "}
+							<span className='text-caption text-blackFifty'>
+								How it works
+							</span>
+						</p>
+					</div>
+					<div className='relative flex-1'>
+						<input
+							className='h-10 w-full rounded-md px-10 py-[9px] gap-2 relative placeholder:text-grayFifty text-body leading-[22px]'
+							placeholder='Search features, tutorials, etc.'
+						/>
+						<SearchIcon
+							color='#808080'
+							width={16}
+							height={16}
+							className='absolute top-[13px] left-4'
+						/>
+					</div>
+					<div className='flex-1 justify-end gap-3 flex'>
+						<div className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
+							<MessageSquareMore width={20} height={20} />
+						</div>
+						<div className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
+							<ChevronDown width={20} height={13} />
+						</div>
+					</div>
+				</header>
+				<div className='py-9 flex items-center'>
+					<h2 className='font-medium text-headingTwo mr-auto'>
+						Overview
+					</h2>
+					<select name='date' id='date'>
+						<option value='Last-Month'>Last Month</option>
+						<option value='Last-Year'>Last Year</option>
+						<option value='Last-Week'>Last Week</option>
+					</select>
+				</div>
+			</section>
 		</div>
 	);
 }
