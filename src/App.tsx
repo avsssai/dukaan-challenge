@@ -18,7 +18,7 @@ import Button from "./components/Button";
 function App() {
 	return (
 		<div className='min-h-screen flex'>
-			<section className='basis-[224px] overflow-y-clip bg-navbar min-h-full text-white px-2 py-6  flex-col gap-4 hidden md:flex'>
+			<section className='basis-[224px] overflow-y-clip bg-navbar min-h-full text-white px-2 py-4  flex-col gap-4 hidden md:flex'>
 				<div className='px-2 flex gap-3 h-[42px] mb-2'>
 					<div className='w-[39px] py-[1px] relative'>
 						<img
@@ -39,20 +39,20 @@ function App() {
 						<ChevronDown strokeWidth={2.5} />
 					</div>
 				</div>
-				<div className='flex-1 mb-10'>
+				<nav className='flex-1 mb-10'>
 					<Tab name='home' />
 					<Tab name='orders' />
 					<Tab name='products' />
 					<Tab name='delivery' />
 					<Tab name='marketing' />
 					<Tab name='analytics' />
-					<Tab name='payments' />
+					<Tab name='paymentsSolid' />
 					<Tab name='tools' />
 					<Tab name='discounts' />
 					<Tab name='audience' />
 					<Tab name='appearance' />
 					<Tab name='plugins' />
-				</div>
+				</nav>
 				<div className='mx-2 bg-navbarAccent px-3 py-[8px] gap-3 flex items-center rounded-md '>
 					<div className='h-9 w-9 bg-whiteTenLightness rounded-md flex items-center justify-center'>
 						{Icons["wallet"].icon}
@@ -73,6 +73,7 @@ function App() {
 						</h5>
 						<p className='flex gap-1 md:gap-[6px] items-center'>
 							<HelpCircle
+								role='button'
 								color='#4D4D4D'
 								width={12}
 								height={12}
@@ -95,15 +96,15 @@ function App() {
 						/>
 					</div>
 					<div className='flex-1 justify-end gap-3 flex'>
-						<div className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
+						<button className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
 							<MessageSquareMore width={20} height={20} />
-						</div>
-						<div className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
+						</button>
+						<button className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
 							<ChevronDown width={20} height={13} />
-						</div>
+						</button>
 					</div>
 				</header>
-				<div className='py-9 flex items-center mb-6'>
+				<div className='mb-1 py-2 lg:py-9 flex items-center lg:mb-6'>
 					<h2 className='font-medium text-headingTwo mr-auto'>
 						Overview
 					</h2>

@@ -14,6 +14,7 @@ export default {
 				whiteCream: "#F2F2F2",
 				blackEightFive: "#D9D9D9",
 				primaryBlue: "#146EB4",
+				hoverBg: "#343b53",
 			},
 			textColor: {
 				whiteTenLightness: "#494f64",
