@@ -204,7 +204,7 @@ function App() {
 								</tr>
 							</thead>
 							<tbody>
-								{Array(19)
+								{Array(12)
 									.fill(1)
 									.map((item, index) => (
 										<tr
@@ -253,7 +253,7 @@ function App() {
 							aria='click to go to page 10'>
 							10
 						</Button>
-						<div className='hidden md:flex'>
+						<div className='hidden lg:flex'>
 							{[11, 12, 13, 14, 15, 16, 17, 18].map((num) => (
 								<Button
 									key={num}
