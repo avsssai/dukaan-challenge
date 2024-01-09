@@ -54,7 +54,7 @@ function App() {
 					<Tab name='appearance' />
 					<Tab name='plugins' />
 				</nav>
-				<div className='mx-2 bg-navbarAccent px-3 py-[8px] gap-3 flex items-center rounded-md '>
+				<div className='mx-2 bg-navbarAccent py-[8px] gap-3 flex justify-center px-0.5 items-center rounded-md '>
 					<div className='h-9 w-9 bg-whiteTenLightness rounded-md flex items-center justify-center'>
 						{Icons["wallet"].icon}
 					</div>
@@ -143,7 +143,7 @@ function App() {
 					<h2 className='text-headingTwo font-medium mb-5 leading-[28px]'>
 						Transactions | This Month
 					</h2>
-					<div className='p-3 pb-6 mb-3'>
+					<div className='p-3 pb-6'>
 						<div className='flex md:items-center mb-3 flex-col sm:flex-row gap-2'>
 							<div className='relative max-w-[248px] mr-auto '>
 								<input

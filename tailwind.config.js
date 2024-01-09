@@ -3,6 +3,7 @@ export default {
 	content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
 	theme: {
 		extend: {
+			fontFamily: { inter: ["Inter", "sans-serif"] },
 			colors: {
 				navbar: "#1E2640",
 				navbarAccent: "#353C53",
