@@ -17,8 +17,8 @@ import Button from "./components/Button";
 
 function App() {
 	return (
-		<div className='min-h-screen flex'>
-			<section className='basis-[224px] overflow-y-clip bg-navbar min-h-full text-white px-2 py-4  flex-col gap-4 hidden md:flex'>
+		<div className='h-screen flex'>
+			<section className='basis-[224px] overflow-clip bg-navbar min-h-full max-h-screen text-white px-2 py-4  flex-col gap-4 hidden md:flex'>
 				<div className='px-2 flex gap-3 h-[42px] mb-2'>
 					<div className='w-[39px] py-[1px] relative'>
 						<img
