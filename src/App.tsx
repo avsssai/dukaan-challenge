@@ -144,136 +144,146 @@ function App() {
 					<h2 className='text-headingTwo font-medium mb-5 leading-[28px]'>
 						Transactions | This Month
 					</h2>
-					<div className='p-3 pb-6'>
-						<div className='flex md:items-center mb-3 flex-col sm:flex-row gap-2'>
-							<div className='relative max-w-[248px] mr-auto '>
-								<input
-									className='h-10 border-2 rounded-sm px-10 py-[9px] leading-5 text-normal gap-2 relative placeholder:text-grayFifty'
-									placeholder='Search by order ID...'
-								/>
-								<SearchIcon
-									color='#808080'
-									width={16}
-									height={16}
-									className='absolute top-[13px] left-4'
-								/>
-							</div>
-							<div className='flex  gap-3'>
-								<Button type='text' aria='click to Sort'>
-									<span className='text-blackThirty mr-1.5'>
-										Sort
-									</span>
-									<span>
-										<ArrowDownUp
-											width={16}
-											height={15}
-											color='#4D4D4D'
-										/>
-									</span>
-								</Button>
-								<Button
-									type='iconButton'
-									aria='click to Download'>
-									<Download
-										color='#4D4D4D'
-										height={16}
-										width={16}
+					<div className='shadow-sm'>
+						<div className='p-3 mb-3'>
+							<div className='flex md:items-center mb-3 flex-col sm:flex-row gap-2'>
+								<div className='relative max-w-[248px] mr-auto '>
+									<input
+										className='h-10 border-2 rounded-sm px-10 py-[9px] leading-5 text-normal gap-2 relative placeholder:text-grayFifty'
+										placeholder='Search by order ID...'
 									/>
-								</Button>
-							</div>
-						</div>
-						<table className='table-fixed w-full leading-5'>
-							<thead>
-								<tr className='h-10  bg-whiteCream text-blackThirty text-[10px] sm:text-normal font-medium'>
-									<th className='text-start pl-3'>
-										Order ID
-									</th>
-									<th className='text-start flex items-center my-auto h-10'>
-										Order date{" "}
-										<MoveDown width={12} height={12} />
-									</th>
-									<th className='text-end'>Order amount</th>
-									<th className='text-end pr-[18px] relative'>
-										Transaction fees
-										<Info
-											width={14}
-											height={14}
-											className='absolute right-0 top-3.5 ml-1'
+									<SearchIcon
+										color='#808080'
+										width={16}
+										height={16}
+										className='absolute top-[13px] left-4'
+									/>
+								</div>
+								<div className='flex  gap-3'>
+									<Button type='text' aria='click to Sort'>
+										<span className='text-blackThirty mr-1.5'>
+											Sort
+										</span>
+										<span>
+											<ArrowDownUp
+												width={16}
+												height={15}
+												color='#4D4D4D'
+											/>
+										</span>
+									</Button>
+									<Button
+										type='iconButton'
+										aria='click to Download'>
+										<Download
+											color='#4D4D4D'
+											height={16}
+											width={16}
 										/>
-									</th>
-								</tr>
-							</thead>
-							<tbody>
-								{Array(19)
-									.fill(1)
-									.map((item, index) => (
-										<tr
-											key={`${item}-${index}`}
-											className='h-12  bg-white text-blackFifty  text-normal font-normal'>
-											<td className='text-start pl-3 text-primaryBlue font-medium'>
-												#281209
-											</td>
-											<td className='text-start'>
-												7 July, 2023
-											</td>
-											<td className='text-end'>
-												₹1,278.23
-											</td>
-											<td className='text-end pr-3'>
-												₹22
-											</td>
-										</tr>
-									))}
-							</tbody>
-						</table>
-					</div>
-				</div>
-				<div className='pagination flex gap-6 items-center justify-center mb-8 flex-wrap'>
-					<Button type='nav' aria='click to go to previous'>
-						<span>
-							<ChevronLeft
-								width={18}
-								height={18}
-								color='#4D4D4D'
-							/>
-						</span>
-						<span className='text-blackThirty'>Previous</span>
-					</Button>
-					<div className='flex gap-2 items-center'>
-						<Button type='number' aria='click to go to page 1'>
-							1
-						</Button>
-						<Button
-							type='number'
-							aria='click to go to previous numbers from 2 to 9'>
-							...
-						</Button>
-						<Button
-							type='number-selected'
-							aria='click to go to page 10'>
-							10
-						</Button>
-						<div className='hidden lg:flex'>
-							{[11, 12, 13, 14, 15, 16, 17, 18].map((num) => (
+									</Button>
+								</div>
+							</div>
+							<table className='table-fixed w-full leading-5'>
+								<thead>
+									<tr className='h-10  bg-whiteCream text-blackThirty text-[10px] sm:text-normal font-medium'>
+										<th className='text-start pl-3'>
+											Order ID
+										</th>
+										<th className='text-start flex items-center my-auto h-10'>
+											Order date{" "}
+											<MoveDown width={12} height={12} />
+										</th>
+										<th className='text-end'>
+											Order amount
+										</th>
+										<th className='text-end pr-[18px] relative'>
+											Transaction fees
+											<Info
+												width={14}
+												height={14}
+												className='absolute right-0 top-3.5 ml-1'
+											/>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									{Array(19)
+										.fill(1)
+										.map((item, index) => (
+											<tr
+												key={`${item}-${index}`}
+												className='h-12  bg-white text-blackFifty  text-normal font-normal'>
+												<td className='text-start pl-3 text-primaryBlue font-medium'>
+													#281209
+												</td>
+												<td className='text-start'>
+													7 July, 2023
+												</td>
+												<td className='text-end'>
+													₹1,278.23
+												</td>
+												<td className='text-end pr-3'>
+													₹22
+												</td>
+											</tr>
+										))}
+								</tbody>
+							</table>
+						</div>
+						<div className='pagination flex gap-6 items-center justify-center mb-8 flex-wrap'>
+							<Button type='nav' aria='click to go to previous'>
+								<span>
+									<ChevronLeft
+										width={18}
+										height={18}
+										color='#4D4D4D'
+									/>
+								</span>
+								<span className='text-blackThirty'>
+									Previous
+								</span>
+							</Button>
+							<div className='flex gap-2 items-center'>
 								<Button
-									key={num}
 									type='number'
-									aria={`click to go to page ${num}`}>
-									{num}
+									aria='click to go to page 1'>
+									1
 								</Button>
-							))}
+								<Button
+									type='number'
+									aria='click to go to previous numbers from 2 to 9'>
+									...
+								</Button>
+								<Button
+									type='number-selected'
+									aria='click to go to page 10'>
+									10
+								</Button>
+								<div className='hidden lg:flex'>
+									{[11, 12, 13, 14, 15, 16, 17, 18].map(
+										(num) => (
+											<Button
+												key={num}
+												type='number'
+												aria={`click to go to page ${num}`}>
+												{num}
+											</Button>
+										)
+									)}
+								</div>
+							</div>
+							<Button type='nav' aria='click to go to next page'>
+								<span className='text-blackThirty'>Next</span>
+								<span>
+									<ChevronRight
+										width={18}
+										height={18}
+										color='#4D4D4D'
+									/>
+								</span>
+							</Button>
 						</div>
 					</div>
-					<Button type='nav' aria='click to go to next page'>
-						<span className='text-blackThirty'>Next</span>
-						<span>
-							<ChevronRight
-								width={18}
-								height={18}
-								color='#4D4D4D'
-							/>
-						</span>
-					</Button>
 				</div>
 			</section>
 		</div>
