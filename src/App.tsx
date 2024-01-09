@@ -14,6 +14,7 @@ import Tab from "./components/Tab";
 import { Icons } from "./utils/Icons";
 import InfoCard from "./components/InfoCard";
 import Button from "./components/Button";
+import Logo from "./assets/Image.png";
 
 function App() {
 	return (
@@ -22,7 +23,7 @@ function App() {
 				<div className='px-2 flex gap-3 h-[42px] mb-2'>
 					<div className='w-[39px] py-[1px] relative'>
 						<img
-							src='/public/Image.png'
+							src={Logo}
 							alt='Nishyan'
 							className='absolute h-full w-full'
 						/>
