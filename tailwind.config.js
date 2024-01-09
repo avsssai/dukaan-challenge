@@ -12,6 +12,8 @@ export default {
 				blackNinety: "#E6E6E6",
 				whiteTenLightness: "#494f64",
 				whiteCream: "#F2F2F2",
+				blackEightFive: "#D9D9D9",
+				primaryBlue: "#146EB4",
 			},
 			textColor: {
 				whiteTenLightness: "#494f64",
