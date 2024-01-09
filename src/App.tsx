@@ -32,7 +32,7 @@ function App() {
 						<a
 							href='#'
 							aria-label='visit store'
-							className='text-[12px] lg:text-[13px] underline'>
+							className='text-[12px] lg:text-[13px] underline leading-4'>
 							Visit store
 						</a>
 					</div>
@@ -59,17 +59,19 @@ function App() {
 						{Icons["wallet"].icon}
 					</div>
 					<div>
-						<p className='text-caption lg:text-subBody text-white'>
+						<p className='text-caption lg:text-subBody text-white leading-4'>
 							Available credits
 						</p>
-						<p className='text-subTitle font-medium'>222.10</p>
+						<p className='text-subTitle font-medium leading-6'>
+							222.10
+						</p>
 					</div>
 				</div>
 			</section>
 			<section className='px-2 md:px-8 w-full overflow-y-scroll'>
 				<header className='flex justify-evenly items-center gap-4 py-3 h-16 border-b'>
 					<div className='flex flex-col lg:flex-row lg:items-center flex-1'>
-						<h5 className='text-blackFifty text-body mr-4'>
+						<h5 className='text-blackFifty text-body mr-4 leading-[22px]'>
 							Payments
 						</h5>
 						<p className='flex gap-1 md:gap-[6px] items-center'>
@@ -80,7 +82,7 @@ function App() {
 								width={12}
 								height={12}
 							/>{" "}
-							<span className='text-[9px] sm:text-[11px] lg:text-caption text-blackFifty'>
+							<span className='text-[9px] leading-4 sm:text-[11px] lg:text-caption text-blackFifty'>
 								How it works
 							</span>
 						</p>
@@ -111,7 +113,7 @@ function App() {
 					</div>
 				</header>
 				<div className='mb-1 py-2 lg:py-9 flex items-center lg:mb-6'>
-					<h2 className='font-medium text-headingTwo mr-auto'>
+					<h2 className='font-medium text-headingTwo mr-auto leading-[28px]'>
 						Overview
 					</h2>
 					<div className='relative inline-block'>
@@ -119,7 +121,9 @@ function App() {
 							name='date'
 							id='date'
 							className='block appearance-none rounded-sm w-[137px] pl-3.5 pr-1 py-1.5 outline outline-1 outline-blackEightFive text-md'>
-							<option value='Last-Month' className='outline-none'>
+							<option
+								value='Last-Month'
+								className='outline-none leading-6'>
 								Last Month
 							</option>
 							<option value='Last-Year'>Last Year</option>
@@ -136,14 +140,14 @@ function App() {
 					<InfoCard title='Amount received' info='₹23,92,312.19' />
 				</div>
 				<div className='flex flex-col'>
-					<h2 className='text-headingTwo font-medium mb-5'>
+					<h2 className='text-headingTwo font-medium mb-5 leading-[28px]'>
 						Transactions | This Month
 					</h2>
 					<div className='p-3 pb-6 mb-3'>
 						<div className='flex md:items-center mb-3 flex-col sm:flex-row gap-2'>
 							<div className='relative max-w-[248px] mr-auto '>
 								<input
-									className='h-10 border-2 rounded-sm px-10 py-[9px] text-normal gap-2 relative placeholder:text-grayFifty leading-[22px]'
+									className='h-10 border-2 rounded-sm px-10 py-[9px] leading-5 text-normal gap-2 relative placeholder:text-grayFifty'
 									placeholder='Search by order ID...'
 								/>
 								<SearchIcon
@@ -177,7 +181,7 @@ function App() {
 								</Button>
 							</div>
 						</div>
-						<table className='table-fixed w-full'>
+						<table className='table-fixed w-full leading-5'>
 							<thead>
 								<tr className='h-10  bg-whiteCream text-blackThirty text-[10px] sm:text-normal font-medium'>
 									<th className='text-start pl-3'>
