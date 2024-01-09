@@ -31,6 +31,7 @@ function App() {
 						<h6 className='text-[15px] font-medium'>Nishyan</h6>
 						<a
 							href='#'
+							aria-label='visit store'
 							className='text-[12px] lg:text-[13px] underline'>
 							Visit store
 						</a>
@@ -74,6 +75,7 @@ function App() {
 						<p className='flex gap-1 md:gap-[6px] items-center'>
 							<HelpCircle
 								role='button'
+								aria-label='click for help'
 								color='#4D4D4D'
 								width={12}
 								height={12}
@@ -96,11 +98,15 @@ function App() {
 						/>
 					</div>
 					<div className='flex-1 justify-end gap-3 flex'>
-						<button className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
+						<button
+							aria-label='click to open chat'
+							className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
 							<MessageSquareMore width={20} height={20} />
 						</button>
-						<button className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
-							<ChevronDown width={20} height={13} />
+						<button
+							aria-label='click to open menu'
+							className='h-10 w-10 bg-blackNinety rounded-full flex items-center justify-center'>
+							<ChevronDown width={20} height={20} />
 						</button>
 					</div>
 				</header>
@@ -137,7 +143,7 @@ function App() {
 						<div className='flex md:items-center mb-3 flex-col sm:flex-row gap-2'>
 							<div className='relative max-w-[248px] mr-auto '>
 								<input
-									className='h-10 border-2 rounded-sm px-10 py-[9px] gap-2 relative placeholder:text-grayFifty text-body leading-[22px]'
+									className='h-10 border-2 rounded-sm px-10 py-[9px] text-normal gap-2 relative placeholder:text-grayFifty leading-[22px]'
 									placeholder='Search by order ID...'
 								/>
 								<SearchIcon
@@ -148,7 +154,7 @@ function App() {
 								/>
 							</div>
 							<div className='flex  gap-3'>
-								<Button type='text'>
+								<Button type='text' aria='click to Sort'>
 									<span className='text-blackThirty mr-1.5'>
 										Sort
 									</span>
@@ -160,7 +166,9 @@ function App() {
 										/>
 									</span>
 								</Button>
-								<Button type='iconButton'>
+								<Button
+									type='iconButton'
+									aria='click to Download'>
 									<Download
 										color='#4D4D4D'
 										height={16}
@@ -216,7 +224,7 @@ function App() {
 					</div>
 				</div>
 				<div className='pagination flex gap-6 items-center justify-center mb-8 flex-wrap'>
-					<Button type='nav'>
+					<Button type='nav' aria='click to go to previous'>
 						<span>
 							<ChevronLeft
 								width={18}
@@ -227,21 +235,31 @@ function App() {
 						<span className='text-blackThirty'>Previous</span>
 					</Button>
 					<div className='flex gap-2 items-center'>
-						<Button type='number'>1</Button>
-						<Button type='number'>...</Button>
-						<Button type='number-selected'>10</Button>
+						<Button type='number' aria='click to go to page 1'>
+							1
+						</Button>
+						<Button
+							type='number'
+							aria='click to go to previous numbers from 2 to 9'>
+							...
+						</Button>
+						<Button
+							type='number-selected'
+							aria='click to go to page 10'>
+							10
+						</Button>
 						<div className='hidden md:flex'>
-							<Button type='number'>11</Button>
-							<Button type='number'>12</Button>
-							<Button type='number'>13</Button>
-							<Button type='number'>14</Button>
-							<Button type='number'>15</Button>
-							<Button type='number'>16</Button>
-							<Button type='number'>17</Button>
-							<Button type='number'>18</Button>
+							{[11, 12, 13, 14, 15, 16, 17, 18].map((num) => (
+								<Button
+									key={num}
+									type='number'
+									aria={`click to go to page ${num}`}>
+									{num}
+								</Button>
+							))}
 						</div>
 					</div>
-					<Button type='nav'>
+					<Button type='nav' aria='click to go to next page'>
 						<span className='text-blackThirty'>Next</span>
 						<span>
 							<ChevronRight
