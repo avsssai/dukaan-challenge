@@ -2,24 +2,29 @@
 
 ## Site hosted on [dukaan-challenge](https://dukaan-challenge.vercel.app/)
 
+## Additional stuff
+
+-   Accessibility for user interaction items
+-   Tab index for keyboard navigation
+
 ## Responsive Screens
 
 ### XL
 
-![XL screen 1440](/screens/xl.png)
+![XL screen 1440](/screens/xl.jpeg)
 
 ### lg
 
-![XL screen 1440](/screens/lg.jpeg)
+![lg screen 1440](/screens/lg.png)
 
 ### md
 
-![XL screen 1440](/screens/md.png)
+![md screen 1440](/screens/md.png)
 
 ### sm
 
-![XL screen 1440](/screens/sm.png)
+![sm screen 1440](/screens/sm.png)
 
 ### xs
 
-![XL screen 1440](/screens/sm.xs)
+![xs screen 1440](/screens/xs.png)
