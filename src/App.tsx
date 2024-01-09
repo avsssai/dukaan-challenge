@@ -204,7 +204,7 @@ function App() {
 								</tr>
 							</thead>
 							<tbody>
-								{Array(12)
+								{Array(19)
 									.fill(1)
 									.map((item, index) => (
 										<tr
